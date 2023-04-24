@@ -7,14 +7,51 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Formulário</h1>
-    <label>informe seu nome:</label><br>
-    <input id="nome"><br>
-    <label>Digite Um Texto:</label><br>
-    <textarea rows="3"></textarea><br>
-    <button id="enviar">Enviar</button>
+    <form>
+        <h1>Formulário</h1>
+        <label for="text">Nome:</label><br>
+        <input type="text" id="nome" placeholder="Digite aqui seu nome"><br>
+        <label for="text">Digite Um Texto:</label><br>
+        <textarea type ="textarea" rows="3" placeholder="Conte uma História"></textarea><br/>
+        <label for="email">E-Mail:</label><br/>
+        <input type="email"  placeholder="seu email aqui"/><br/>
+        <label for="number" >Fone contato:</label><br/>
+        <input type="number" placeholder="apenas numeros"/><br/>
+        <label type ="number">Senha</label><br/>
+        <input type="password" placeholder="informe a senha"><br/>
+        <label type ="color">Selecione Uma Cor</label><br/>
+        <input type="color"/><br/>
+        <label>Grau de instruções:</label><br/>
+        <select>
+            <option>Fundamental incompleto</option>
+            <option>Fundamental completo</option>
+            <option>médio incompleto</option>
+            <option>médio completo</option>
+            <option selected>superior incompleto</option>
+            <option>superior completo</option>
+        </select><br/>
+        <label>Cursos Realizados:</label><br/>
+        <select multiple>
+            <option>HTML</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>JavaScript</option>
+            <option>Win server</option>
+            <option>PostGro</option>
+        </select><br/>
+        <label>Sua cor favorita?</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_vermelha" checked/><label for="cor_favorita">Vermelho</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_verde"/><label for="cor_favorita">Verde</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_amarelo"/><label for="cor_favorita">Amarelo</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_azul"/><label for="cor_favorita">AZul</label><br/>
+        <input type="checkbox" id="check-box-termos"/><label for="check-box-termos">Aceito os Termos<span></span></label>
+        <hr>
+        <button id="enviar" type="submit">Enviar</button>
+        <button id="reset" type="reset">Limpar</button>
+    </form>
 </body>
 <footer>
     <a href="./index.html">Home</a>
+    <p>2023@ todosos direitos reservados</p>
 </footer>
 </html>
