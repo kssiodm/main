@@ -1,0 +1,19 @@
+qual a função do HTMl,CSS,JavaScript para o desenvolvimento web?
+
+--->HTML:
+	os web deigners utilizam  o HTML para projetar como um navegador vai exibir
+	os elementos das páginas web,como textos,hiperlinks e arquivos de mídia.
+
+--->CSS
+	O CSS é utilizado para estilizar,polir elementos escritos em linguagens 
+	como o HTMl.principalmente o conteudo visual do site como:decorações,cor,fonte,espaçamento e etc.
+--->JS
+	O JavaScript permite controlar elementos de uma pagina em tempo real sem precisar de respostas de servidores.
+	Alem de torna-lo muito mais dinamico e imperativo além de versátil.
+
+
+
+fonte:
+	https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos
+	https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css
+	https://tecnoblog.net/responde/o-que-e-javascript-guia-para-iniciantes/
