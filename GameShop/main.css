@@ -4,12 +4,19 @@
     box-sizing: border-box;
 }
 
+header h1,
+section h2{
+    font-family: 'bungee', cursive;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 header{
     padding: 16px 0;
     background-color: #182C61;
     color: #ecf0f1;
-    font-weight: 800;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header nav li{
@@ -27,12 +34,6 @@ header nav li a{
     max-width: 1260px;
     width: 100%;
     margin: 0 auto;
-}
-
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 header .container,
@@ -76,13 +77,11 @@ section p{
 
 #contact .container{
     display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .contact-methods{
     display: flex;
     justify-content: space-between;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 form input,
@@ -121,7 +120,6 @@ input:focus, textarea:focus{
 .social-links li{
     display: inline;
     margin-right: 8px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .social-links li a{
