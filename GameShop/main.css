@@ -8,6 +8,8 @@ header{
     padding: 16px 0;
     background-color: #182C61;
     color: #ecf0f1;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header nav li{
@@ -74,14 +76,18 @@ section p{
 
 #contact .container{
     display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .contact-methods{
     display: flex;
     justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-form input, form textarea, form button{
+form input,
+form textarea,
+form button{
     display: block;
     width: 320px;
     margin-bottom: 8px;
@@ -115,6 +121,7 @@ input:focus, textarea:focus{
 .social-links li{
     display: inline;
     margin-right: 8px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .social-links li a{
