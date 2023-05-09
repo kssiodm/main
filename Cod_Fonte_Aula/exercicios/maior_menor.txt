@@ -1,0 +1,21 @@
+num1 = prompt("digite um numero:")
+
+num2 = prompt("digite um numero:")
+
+num3 = prompt("digite um numero:")
+
+if (num1 > num2 && num1 > num3) {
+    console.log(`numero ${num1} é maior`)
+} else if(num2 > num1 && num2 > num3) {
+    console.log(`numero ${num2} é maior`) 
+}else{
+    console.log(`numero ${num3} é maior`)
+}
+
+if (num1 < num2 && num1 < num3) {
+    console.log(`numero ${num1} é menor`)
+} else if(num2 < num1 && num2 < num3) {
+    console.log(`numero ${num2} é menor`) 
+}else{
+    console.log(`numero ${num3} é menor`)
+}
