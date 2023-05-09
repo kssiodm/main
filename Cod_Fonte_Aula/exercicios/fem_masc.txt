@@ -1,0 +1,9 @@
+letra = prompt("digite aqui seu sexo M - Masculino e F - Feminino")
+
+if (letra == 'M' || letra =='m') {
+    console.log("Masculino")
+} else if(letra == 'F' || letra =='f'){
+    console.log("Feminino")
+}else{
+    console.log("sexo inválido")
+}
