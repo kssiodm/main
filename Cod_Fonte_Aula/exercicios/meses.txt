@@ -1,36 +1,37 @@
 num = prompt("insira o valor:");
 if(num == 1);{
     console.log("corresponde ao mes de janeiro")
-
+}
 if(num == 2);{
     console.log("corresponde ao mes de fevereiro")
-
+}
 if(num == 3);{
     console.log("corresponde ao mes de março")
-
+}
 if(num == 4);{
     console.log("corresponde ao mes de abril")
-
+}
 if(num == 5);{
     console.log("corresponde ao mes de maio")
-
+}
 if(num == 6);{
     console.log("corresponde ao mes de junho")
-
+}
 if(num == 7);{
     console.log("corresponde ao mes de julho")
-
+}
 if(num == 8);{
     console.log("corresponde ao mes de agosto")
-
+}
 if(num == 9);{
     console.log("corresponde ao mes de setembro")
-
+}
 if(num == 10);{
     console.log("corresponde ao mes de outubro")
-
+}
 if(num == 11);{
     console.log("corresponde ao mes de novembro")
-
+}
 if(num == 12);{
     console.log("corresponde ao mes de dezembro")
+}
