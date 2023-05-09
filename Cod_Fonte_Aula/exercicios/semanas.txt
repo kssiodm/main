@@ -1,0 +1,29 @@
+let dia_semana = 3,semana;
+
+switch (dia_semana){
+    case 1:
+        semana = "Domingo";
+        break;
+    case 2:
+        semana = "Segunda";
+        break;
+    case 3:
+        semana = "Terça";
+        break;
+    case 4:
+        semana = "Quarta";
+        break;
+    case 5:
+        semana = "Quinta";
+        break;
+    case 6:
+        semana = "Sexta";
+        break;
+    case 7:
+        semana = "Sabádo";
+        break;
+    default:
+        semana = "valor invalido";
+}
+
+alert(semana);
