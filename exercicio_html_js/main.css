@@ -36,3 +36,25 @@ button{
 button:hover{
     background-color: #27ae60;
 }
+
+.invalido{
+    font-size: 12px;
+    padding: 12px;
+    background-color: red;
+    color: #fff;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.maior{
+    background-color: #27ae60;
+    color: #fff;
+    padding: 16px;
+    display: none;
+}
+
+input.error{
+    color: red;
+    border-color: red;
+    outline-color: red;
+}

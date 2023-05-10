@@ -1,32 +1,48 @@
-// alert('Olá Mundo');
+
+const nomeBeneficiario = document.getElementById('nome_beneficiario');
 let formValido = false;
+const form = document.getElementById('form_dep')
+
+
 function validaNome(nomeCompleto){
     const nomeComoArray = nomeCompleto.split(' ')
 
     return nomeComoArray.length >= 2;
 }
 
-const form = document.getElementById('form_dep')
-
 form.addEventListener('submit', function(e){
-
-    let formValido = false;
 
     e.preventDefault();
 
-    const nomeBeneficiario = document.getElementById('nome_beneficiario');
     const numeroConta = document.getElementById('numero_conta');
     const valorDeposito = document.getElementById('valor_deposito');
-    const menssagemSucesso = `valor  de: ${valorDeposito.value} foi depositado para o cliente ${nomeBeneficiario.value} - conta nº: ${numeroConta.value}`
+    const menssagemSucesso = `valor  de: <b>${valorDeposito.value}</b> foi depositado para o cliente <b>${nomeBeneficiario.value}</b> - conta nº: <b>${numeroConta.value}</b>`
 
     formValido = validaNome(nomeBeneficiario.value)
 
     if(formValido){
-        alert(menssagemSucesso)
+        const containerMenssagemSucesso = document.querySelector('.mensagem_sucesso');
+        containerMenssagemSucesso.innerHTML = menssagemSucesso;
+        containerMenssagemSucesso.style.diplay = 'block';
+
         nomeBeneficiario.value = '';
         valorDeposito = '';
         numeroConta = '';
     }else{
-        alert('o nome não está completo')
+        nomeBeneficiario.style.border = '1px solid red';
+        document.querySelector('.mensagem_erro').style.display = 'block'
+    }
+})
+
+nomeBeneficiario.addEventListener('keyup',function(e){
+    console.log(e.target.value);
+    formValido = validaNome(e.target.value);
+
+    if(!formValido){
+        nomeBeneficiario.classList.add('error');
+        document.querySelector('mensagem_erro').style.diplay = 'block';
+    }else{
+        nomeBeneficiario.classList.remove('error');
+        document.querySelector('mensagem_erro').style.diplay = 'none';
     }
 })
