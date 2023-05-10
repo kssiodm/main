@@ -2,7 +2,7 @@ const form = document.getElementById('form_dep')
 
 form.addEventListener('submit', function(e){
 
-    let formValido = false;
+    // let formValido = false;
 
     e.preventDefault();
 
@@ -10,7 +10,7 @@ form.addEventListener('submit', function(e){
     const valor_b = document.getElementById('numero_b');
     const menssagemdeSucesso = ` ${valor_b.value} é maior que ${valor_a.value}`
 
-    if(valor_b.value > valor_a.value){
+    if(parseInt(valor_b.value) > parseInt(valor_a.value)){
         alert(menssagemdeSucesso)
         valor_b = ' ';
         valor_a = ' ';
