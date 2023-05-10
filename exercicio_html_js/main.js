@@ -12,8 +12,8 @@ form.addEventListener('submit', function(e){
 
     if(valor_b.value > valor_a.value){
         alert(menssagemdeSucesso)
-        valor_b = '';
-        valor_a = '';
+        valor_b = ' ';
+        valor_a = ' ';
     }else{
         alert('inválido')
     }
