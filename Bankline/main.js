@@ -23,11 +23,11 @@ form.addEventListener('submit', function(e){
     if(formValido){
         const containerMenssagemSucesso = document.querySelector('.mensagem_sucesso');
         containerMenssagemSucesso.innerHTML = menssagemSucesso;
-        containerMenssagemSucesso.style.diplay = 'block';
+        containerMenssagemSucesso.style.display = 'block';
 
         nomeBeneficiario.value = '';
-        valorDeposito = '';
-        numeroConta = '';
+        // valorDeposito = '';
+        // numeroConta = '';
     }else{
         nomeBeneficiario.style.border = '1px solid red';
         document.querySelector('.mensagem_erro').style.display = 'block'
@@ -40,9 +40,9 @@ nomeBeneficiario.addEventListener('keyup',function(e){
 
     if(!formValido){
         nomeBeneficiario.classList.add('error');
-        document.querySelector('mensagem_erro').style.diplay = 'block';
+        document.querySelector('mensagem_erro').style.display = 'block';
     }else{
         nomeBeneficiario.classList.remove('error');
-        document.querySelector('mensagem_erro').style.diplay = 'none';
+        document.querySelector('mensagem_erro').style.display = 'none';
     }
 })
