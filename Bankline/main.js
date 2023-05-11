@@ -39,10 +39,10 @@ nomeBeneficiario.addEventListener('keyup',function(e){
     formValido = validaNome(e.target.value);
 
     if(!formValido){
-        nomeBeneficiario.classList.add('error');
+        nomeBeneficiario.classList.remove('error');
         document.querySelector('mensagem_erro').style.display = 'block';
     }else{
-        nomeBeneficiario.classList.remove('error');
+        nomeBeneficiario.classList.add('error');
         document.querySelector('mensagem_erro').style.display = 'none';
     }
 })
