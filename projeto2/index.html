@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Médias</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header>
+            <img src="./imagens/logo.png" alt="Chapéu + canudo"/>
+            <h1>Resultado Aluno</h1>
+        </header>
+        <form>
+            <input type="text" required placeholder="Nome da atividade"/>
+            <input type="number" required placeholder="Nota da atividade"/>
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Nome da Atividade
+                    </th>
+                    <th>
+                        Nota
+                    </th>
+                    <th>
+                        Aprovado?
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Atividade 1</td>
+                    <td>7</td>
+                    <td><img src="imagens/aprovado.png" alt="Emoji festejando"/></td>
+                </tr>
+                <tr>
+                    <td>Atividade 2</td>
+                    <td>5,6</td>
+                    <td><img src="imagens/reprovado.png" alt="Emoji desapontado"/></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Nota Média</td>
+                    <td>19,6</td>
+                    <td>Aprovado</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
