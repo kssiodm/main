@@ -34,15 +34,20 @@ form.addEventListener('submit', function(e){
     }
 })
 
+let nome = []
+
+function calculaArea(alt, base){return base * alt;}
+
 nomeBeneficiario.addEventListener('keyup',function(e){
     console.log(e.target.value);
+
     formValido = validaNome(e.target.value);
 
     if(!formValido){
-        nomeBeneficiario.classList.remove('error');
-        document.querySelector('mensagem_erro').style.display = 'block';
-    }else{
         nomeBeneficiario.classList.add('error');
         document.querySelector('mensagem_erro').style.display = 'none';
+    }else{
+        nomeBeneficiario.classList.remove('error');
+        document.querySelector('mensagem_erro').style.display = 'block';
     }
 })
