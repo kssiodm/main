@@ -1,0 +1,19 @@
+let turno;
+
+turno = prompt("em que turno voce estuda M - matutino, V -vespertino ou N - noturno");
+
+if (turno == 'm' || turno == 'M') {
+    console.log("Bom Dia")
+}
+
+if (turno == 'v' || turno == 'V') {
+    console.log("Boa Tarde")
+}
+
+if (turno == 'n' || turno == 'N') {
+    console.log("Boa Noite")
+}
+
+if (turno != 'm' && turno != 'M' && turno != 'v' && turno != 'V' && turno != 'n' && turno != 'N') {
+    console.log("invalido")
+}
