@@ -1,0 +1,13 @@
+let peco1,preco2,preco3;
+
+preco1 = prompt("informe o valor do produto 1º:");
+preco2 = prompt("informe o valor do produto 2º:");
+preco3 = prompt("informe o valor do produto 3º:");
+
+if (preco1 < preco2 && preco1 < preco3) {
+    console.log(`o produto que se deve comprar é o que custa ${preco1}`)
+} else if(preco2 < preco1 && preco2 < preco3) {
+    console.log(`o produto que se deve comprar é o que custa ${preco2}`)
+}else{
+    console.log(`o produto que se deve comprar é o que custa ${preco3}`)
+}
