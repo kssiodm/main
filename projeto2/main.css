@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -23,7 +23,20 @@ header img{
 
 header h1{
     font-size: 40px;
-    font-weight: 800;
+    font-weight: bold;
+}
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form{
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 form input{
@@ -41,3 +54,41 @@ form button{
     cursor: pointer;
 }
 
+table{
+    width: 100%;
+}
+
+table th{
+    padding: 16px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 3px solid #000;
+}
+
+table td{
+    padding: 16px 0;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table td img{
+    height: 24px;
+}
+
+.resultado{
+    padding: 8px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+.aprovado{
+    background-color: #009432;
+}
+
+.reprovado{
+    background-color: red;
+}
