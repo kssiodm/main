@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Calcular Gastos</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="midia/vermelho.png" alt="cruz vermelha"/>
+                <h1>Calculando o Total Gasto</h1>
+            </header>
+            <form id="form_atividade">
+                <input type="text" id="nome_remedio" required placeholder="Nome do Remédio"/>
+                <input type="number" id="quantidade" required placeholder="quantidade" min="0" max="30"/>
+                <input type="number" id="custo" required placeholder="Preço" min="0" max="50"/>
+                <button type="submit">Enviar</button>
+            </form>
+            <table cellspacing = "0">
+                <thead>
+                    <tr>
+                        <th>
+                            Nome do Remédio
+                        </th>
+                        <th>
+                            Quantidade
+                        </th>
+                        <th>
+                            Preço
+                        </th>
+                        <th>
+                            total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas construidas pelo main.js -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Valor Total</td>
+                        <td id="total_gasto"></td>
+                        <td id="total_possui"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

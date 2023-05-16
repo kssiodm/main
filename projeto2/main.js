@@ -54,7 +54,7 @@ function atualizarMedia(){
 function calculaMedia(){
     let somaDasNotas = 0
 
-    for(let i = 0;i < notas.length;i++){
+    for(let i = 0;i < notas.length;i ++){
         somaDasNotas += notas[i];
     }
 

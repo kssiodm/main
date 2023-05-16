@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+
 }
 
 body{
-    background-color: #E7E7E7;
+    background-color: #86e083f8;
     padding-top: 100px;
 }
 
@@ -47,11 +48,13 @@ form input{
 }
 
 form button{
-    background-color: #009432;
+    background-color: #3d08fc;
     color: #fff;
     font-size: 20px;
     border: none;
     cursor: pointer;
+    border-radius: 200px;
+    border-bottom: 2px solid #000;
 }
 
 table{
