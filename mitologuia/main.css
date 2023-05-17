@@ -51,7 +51,7 @@ section h2{
     margin-bottom: 16px;
 }
 section{
-    color: #182C61;
+    color: #050505;
 }
 
 section p{
@@ -88,7 +88,7 @@ section h2,
 
 
 .articles article a{
-    background-color: blue;
+    background-color: #6B04D4;
     color: aliceblue;
     text-decoration: none;
     padding: 8px;

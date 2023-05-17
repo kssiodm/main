@@ -58,7 +58,5 @@ function calculaMedia(){
         somaDasNotas += notas[i];
     }
 
-    const media = somaDasNotas / notas.length;
-
-    console.log()
+    return somaDasNotas / notas.length;
 }

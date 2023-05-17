@@ -2,7 +2,8 @@ const form = document.getElementById('form_atividade');
 const imgAprovado = '<img src="midia/aprovado.png" alt="simbolo aprovado"/>';
 const imgNegado = '<img src="midia/negado.png" alt="simbolo negado"/>';
 let produto = [];
-let soma = []
+let soma = [];
+let custoTotal = [];
 const orcamento = parseInt(prompt("Informe o orçamento: "));
 
 const spanAceito = '<span class="total autorizado">Aprovado</span>';
@@ -14,6 +15,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     adicionarLinha();
     atualizarTabela();
+    calcularQuantidade()
     atualizarGasto();
 });
 
@@ -27,11 +29,11 @@ function adicionarLinha(){
     }else{
         produto.push(inputNomeRemedio.value);
         soma.push(parseFloat(inputQuantidade.value));
+        custoTotal.push(parseFloat(inputCusto));
         let linha = '<tr>';
         linha += `<td>${inputNomeRemedio.value}</td>`;
         linha += `<td>${inputQuantidade.value}</td>`;
         linha += `<td>${inputCusto.value}</td>`;
-        linha += `<td>${atualizarGasto() >= orcamento ? imgAprovado : imgNegado}</td>`;
         linha += '</tr>';
         linhas += linha;
     }
@@ -47,13 +49,13 @@ function atualizarTabela(){
 }
 
 function atualizarGasto(){
-    const custoFinal = calcularCusto();
+    const custoFinal = totalGasto();
 
     document.getElementById('total_gasto').innerHTML = custoFinal;
     document.getElementById('total_possui').innerHTML = custoFinal >= orcamento ? spanAceito : spanNegado;
 }
 
-function calcularCusto(){
+function calcularQuantidade(){
     let somaPrecos = 0;
 
     for(let i = 0; i < soma.length; i ++){
@@ -61,4 +63,18 @@ function calcularCusto(){
     }
 
     return somaPrecos + soma.length;
+}
+
+function calcularCusto(){
+    let somaPrecos = 0;
+
+    for(let i = 0; i < soma.length; i ++){
+        somaPrecos += custoTotal[i];
+    }
+
+    return somaPrecos + custoTotal.length;
+}
+
+function totalGasto(){
+    return calcularCusto() + custoTotal.length
 }
