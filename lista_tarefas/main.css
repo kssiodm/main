@@ -50,6 +50,7 @@ button{
 }
 
 ul{
+    display: block;
     text-align: center
 }
 

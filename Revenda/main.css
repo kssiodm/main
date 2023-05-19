@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif'
+}
+
+header{
+    background-color: #192a56;
+    padding: 16px 0;
+    color: #fff;
+}
+
+nav {
+    background-color: rgb(172, 58, 218);
+    padding: 16px;
+
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu_hamburger{
+    width: 32px;
+}
+
+.menu_hamburger span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    
+}
+
