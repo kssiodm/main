@@ -1,3 +1,6 @@
+const positivo = '<img src="imagens/legal.png" alt="positivo"/>'
+const negativo = '<img src="./imagens/negativo.png" alt="negativo"/>'
+
 $(document).ready(function(){
     $('header button').click(function(e){
         $('form').slideDown();
@@ -20,7 +23,6 @@ $(document).ready(function(){
         $(tarefaAtualizada).appendTo('ul');
         $(tarefaAtualizada).fadeIn(100);
         $('#tarefa_nova').val('');
-
         $('li').click(function(){
             $(this).css("text-decoration","line-through");
         });

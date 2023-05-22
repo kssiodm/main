@@ -4,39 +4,196 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
             <link rel="stylesheet" href="main.css">
+
+            <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+            <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
         <title>SENAC motors</title>
     </head>
     <body>
-        <header>SENAC motors</header>
-        <div class="container">
-            <h1>SENAC motors</h1>
-            <div class="menu_hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <div class="container"></div>
-                    <ul>
-                        <li>
-                            <a href="#">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="#">Em Destaque</a>
-                        </li>
-                        <li>
-                            <a href="#">Promoções</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </ul>
+        <header>
+            <div class="container container _flex">
+                <h1>SENAC motors</h1>
+                <div class="menu_hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
+            </div>
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">Em Destaque</a>
+                            </li>
+                            <li>
+                                <a href="#">Promoções</a>
+                            </li>
+                            <li>
+                                <a href="#">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+        </header>
+        <div id="carrossel_imagens">
+            <img src="./imagens/images/slide1.png" alt="Porsche carrera"/>
+            <img src="./imagens/images/slide2.png" alt="Carro da BMW"/>
+            <img src="./imagens/images/slide3.png" alt="Ford GT"/>
         </div>
+    <section id="sobre_a_loja">
+        <div class="container container_flex">
+            <img src="imagens/images/loja.jpg" alt="fachada loja"/>
+            <section id="sobre_a_loja">
+                <div class="texto">
+                <h2>Sobre a loja</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ipsam facilis qui nulla blanditiis magni alias, animi reprehenderit possimus nam excepturi explicabo et? Ab excepturi voluptas quia modi porro repellat!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ipsam facilis qui nulla blanditiis magni alias, animi reprehenderit possimus nam excepturi explicabo et? Ab excepturi voluptas quia modi porro repellat!
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section id="destaque">
+        <div class="container">
+            <h2>Em Destaque</h2>
+            <ul class="container_flex lista_veiculos">
+                <li>
+                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
+                    <h3>carro BMW</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <strong>R$ 75.000,00</strong>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li>
+                    <img src="./imagens/images/fusca.png" alt="Fusca"/>
+                    <h3>Wolkswagen Fusca</h3>
+                    <p>
+                        câmbio manual,2 portas, motor 1.6 
+                    </p>
+                    <strong>R$ 42.900</strong>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li class="item_central">
+                    <img src="./imagens/images/uno.png" alt="Uno"/>
+                    <h3>Fiat Uno</h3>
+                    <p>
+                        câmbio manual,4 portas,motor 1.0,sem escada
+                    </p>
+                    <strong>R$ 29.900</strong>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li>
+                    <img src="./imagens/images/opala.png" alt="opala"/>
+                    <h3>Chevroat Opala</h3>
+                    <p>
+                        câmbio manual,4 portas,motor 4.1
+                    </p>
+                    <strong>R$ 99.900 </strong>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li class="item_central">
+                    <img src="./imagens/images/camaro.png" alt="camaro"/>
+                    <h3>Chevroat Camaro</h3>
+                    <p>
+                        câmbio automático,2 portas, motor v8
+                    </p>
+                    <strong>R$ 199.900</strong>
+                    <button type="button">Tenho interresse</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="promocao">
+        <div class="container">
+            <h2>Promoções</h2>
+            <ul class="container_flex lista_veiculos">
+                <li>
+                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
+                    <h3>carro BMW</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <div class="preco">
+                        <del>100.000,00</del>
+                        <strong>R$ 75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li>
+                    <img src="./imagens/images/moto-bmw.png" alt="moto"/>
+                    <h3>carro</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <div class="preco">
+                        <del>49.900</del>
+                        <strong>R$ 75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li class="item_central">
+                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
+                    <h3>carro BMW</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <div class="preco">
+                        <del>100.000,00</del>
+                        <strong>R$ 75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li>
+                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
+                    <h3>carro BMW</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <div class="preco">
+                        <del>100.000,00</del>
+                        <strong>R$ 75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interresse</button>
+                </li>
+                <li class="item_central">
+                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
+                    <h3>carro BMW</h3>
+                    <p>
+                        câmbio automático,4 portas,vidros e travas elétricas.
+                    </p>
+                    <div class="preco">
+                        <del>100.000,00</del>
+                        <strong>R$ 75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interresse</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="formulario">
+
+    </section>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="main.js"></script>
+        <script></script>
     </body>
 </html>
