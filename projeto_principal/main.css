@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Roboto', 'sans-serif' */
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #FF0000;
+    padding-top: 16px;
+    color: #fff;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav{
+    background-color: #FE595D;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.menu_hamburger{
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu_hamburger span{
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container_flex{
+    display: flex;
+}
+
+.sobre_academia img{
+    max-width: 480px;
+}
+.texto h2, .texto p{
+    margin: 16px;
+    text-align: justify;
+}
+
+.texto h2{
+    margin-top: 0;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+.lista_conteudo{
+    flex-wrap: wrap;
+}
+
+.lista_conteudo li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista_conteudo li img{
+    max-width: 100%;
+}
+
+.lista_conteudo li h3{
+    margin: 16px 0;
+}
+
+.item_central{
+    margin: 0 5%;
+}

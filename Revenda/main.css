@@ -10,18 +10,26 @@ html{
 }
 
 .container{
-    max-width: 1024;
+    max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
+header, footer{
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
 }
 
-header > .container{
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container,
+footer > .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +76,14 @@ nav li a{
 #sobre_a_loja img{
     max-width: 480px;
 }
+.texto h2, .texto p{
+    margin: 16px;
+    text-align: justify;
+}
+
+.texto h2{
+    margin-top: 0;
+}
 
 section{
     padding: 48px 0;
@@ -99,7 +115,7 @@ section h2{
     margin: 0 5%;
 }
 
-.lista_veiculos li button{
+button{
     display: block;
     width: 100%;
     padding: 8px;
@@ -121,4 +137,46 @@ strong, .preco{
 .preco del{
     color: #ccc;
     font-size: 16px;
+}
+
+.form_campo{
+    margin-bottom: 16px;
+}
+
+.form_campo label{
+    font-weight: bold;
+    display: block;
+}
+
+.form_campo input,
+.form_campo textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form_campo textarea{
+    resize: none;
+    height: 120px;
+}
+form{
+    max-width: 380px;
+}
+
+form button{
+    max-width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
+}
+
+footer .container{
+    justify-content: space-between;
+    align-items: center;
 }

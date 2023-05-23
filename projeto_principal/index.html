@@ -9,31 +9,37 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <h1>academia-Academia</h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#sobre">Sobre a Academia</a>
-                        </li>
-                        <li>
-                            <a href="#contamos">Contamos</a>
-                        </li>
-                        <li>
-                            <a href="#cadastro">Cadastro</a>
-                        </li>
-                        <li>
-                            <a href="#contatos">Contato</a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="container container _flex">
+                <h1>academia Academia</h1>
+                <div class="menu_hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">temos</a>
+                            </li>
+                            <li>
+                                <a href="#">cadastro</a>
+                            </li>
+                            <li>
+                                <a href="#">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
         </header>
-
         <section id="sobre"> 
-            <div class="container">
+            <div class="container container_flex">
                 <img class="sobre_academia" src="midia/academia.png" alt="Fachada da academia"/>
-                <div>
+                <div class="texto">
                     <h2>Sobre a academia</h2>
                     <p>
                         Nossa academia tem como interesse de manter o conforto de nossos frequentadores.além de promover
@@ -43,32 +49,36 @@
                 </div>
             </div>
         </section>
-    </body>
 
-    <section id="Contamos">
-        <div class="container">
-            <h2>possuimos maquinas para os mais diversos tipos de exercios</h2>
-            <div class="articles">
-                <article>
-                    <img src="#" alt=""/>
-                    <h3>Nova Atualização do Minecraft está Bombando Entre os Jovens</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    </p>
-                </article>
-                <article>
-                    <img src="#" alt=""/>
-                    <h3>Valve Finalmente Decide Atualizar o CS-GO</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    </p>
-                </article>
-                    <article>
-                        <img src="#" alt=""/>
-                        <h3>Subnautica tem Um dos Melhores Gráficos de Todos os Jogos</h3>
+        <section id="temos">
+            <div class="container">
+                <h2>O que temos?</h2>
+                <ul class="container_flex lista_conteudo">
+                    <li>
+                        <img src="midia/maquinas.png" alt="Maquinas de academia"/>
+                        <h3>Máquinas</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            possuimos máquinas de todos os tipos para todos os exercicios de sua preferência
                         </p>
-                </article>
-    </section>
+                    </li>
+                    <li class="item_central">
+                        <img src="midia/halteres.png" alt="Halteres"/>
+                        <h3>Halteres</h3>
+                        <p>
+                            possuimos halteres de todos os tamanhos para você ultilizar
+                        </p>
+                    </li>
+                    <li>
+                        <img src="midia/pesos.png" alt="pesos"/>
+                        <h3>pesos</h3>
+                        <p>
+                            possuimos pesos de todos os tamahos para que todos poderem fazer exercicios
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
