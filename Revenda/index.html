@@ -9,10 +9,10 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-            <link rel="stylesheet" href="main.css">
+            <link rel="stylesheet" href="./main.css">
 
-            <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-            <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+            <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+            <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 
         <title>SENAC motors</title>
     </head>
@@ -69,16 +69,16 @@
             <h2>Em Destaque</h2>
             <ul class="container_flex lista_veiculos">
                 <li>
-                    <img src="./imagens/images/carro-bmw.png" alt="BMW"/>
-                    <h3>carro BMW</h3>
+                    <img src="./imagens/images/bmw2.png" alt="BMW"/>
+                    <h3>BMW M8</h3>
                     <p>
-                        câmbio automático,4 portas,vidros e travas elétricas.
+                        câmbio automático,4 portas,motor 4.4 v8
                     </p>
                     <strong>R$ 75.000,00</strong>
                     <button type="button">Tenho interresse</button>
                 </li>
                 <li class="item_central">
-                    <img src="./imagens/images/fusca.png" alt="Fusca"/>
+                    <img src="./imagens/images/fusca2.png" alt="Fusca"/>
                     <h3>Wolkswagen Fusca</h3>
                     <p>
                         câmbio manual,2 portas, motor 1.6 
@@ -90,7 +90,7 @@
                     <img src="./imagens/images/uno2.png" alt="Uno"/>
                     <h3>Fiat Uno</h3>
                     <p>
-                        câmbio manual,4 portas,motor 1.0,
+                        câmbio manual,4 portas,motor 1.0
                     </p>
                     <strong>R$ 29.900</strong>
                     <button type="button">Tenho interresse</button>
@@ -149,7 +149,7 @@
                     <img src="./imagens/images/mustang.png" alt="mustang"/>
                     <h3>Ford Mustang</h3>
                     <p>
-                        câmbio automático,2 portas, motor 5.0 V8 
+                        câmbio automático,2 portas, motor 5.0 V8 turbo
                     </p>
                     <div class="preco">
                         <del>601.900</del>
@@ -161,7 +161,7 @@
                     <img src="./imagens/images/nissan_frontier.png" alt="Nissan Frontier"/>
                     <h3>Nissan Frontier</h3>
                     <p>
-                        câmbio automático,4 portas,motor 2.3 16V TURBO,4x4
+                        câmbio automático,4 portas,motor 2.3 4x4
                     </p>
                     <div class="preco">
                         <del>206.210</del>
@@ -191,23 +191,23 @@
             <form>
                 <div class="form_campo">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" name="nome">
                 </div>
                 <div class="form_campo">
                     <label for="telafone">Telefone:</label>
-                    <input type="tel" id="telefone">
+                    <input type="tel" id="telefone" name="telefone">
                 </div>
                 <div class="form_campo">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="nome">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="form_campo">
                     <label for="veiculo_interesse">Veiculo:</label>
-                    <input type="text" id="veiculo">
+                    <input type="text" id="veiculo_interesse" name="veiculo_interesse">
                 </div>
                 <div class="form_campo">
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem"></textarea>
+                    <textarea id="mensagem" name="mensagem"></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
@@ -239,9 +239,11 @@
     </footer>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/jquery.mask.min.js"></script>
-        <script src="main.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/messages_pt_BR.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

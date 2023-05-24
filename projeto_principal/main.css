@@ -16,7 +16,7 @@ html{
 }
 
 header{
-    background-color: #FF0000;
+    background-color: #8400ff;
     padding-top: 16px;
     color: #fff;
 }
@@ -36,7 +36,7 @@ header > .container{
 }
 
 nav{
-    background-color: #FE595D;
+    background-color: #a99afd;
     padding: 16px 0;
     display: none;
 }
