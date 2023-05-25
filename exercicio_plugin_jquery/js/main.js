@@ -2,17 +2,18 @@ $(document).ready(function(){
     $('header button').click(function(e){
         $('form').slideDown();
     })
-    
+
     $('#botao_cancelar').click(function(){
         $('form').slideUp();
     })
-    
-    $('#nome').mask('SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS', {
-        placeholder: 'seu nome'
+
+    $('#nome').bind('keyp blur', function(){
+        let i = $(this);
+        i.val(i.val().replace(/[^a-z A-Z]/g, ''));
     })
 
     const ponto = '.';
-    const traco = '-'
+    const traco = '-';
 
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: '(12)32495-8264'

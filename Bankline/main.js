@@ -47,7 +47,7 @@ nomeBeneficiario.addEventListener('keyup',function(e){
         nomeBeneficiario.classList.add('error');
         document.querySelector('mensagem_erro').style.display = 'none';
     }else{
-        nomeBeneficiario.classList.remove('error');
+        nomeBeneficiario.classList.none('error');
         document.querySelector('mensagem_erro').style.display = 'block';
     }
 })
