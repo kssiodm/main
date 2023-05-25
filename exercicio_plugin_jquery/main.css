@@ -15,17 +15,10 @@ html{
     margin: 0 auto;
 }
 
-header{
-    background-color: #192a56;
+header, footer{
+    background-color: #25bbe0;
     padding-top: 16px;
     color: #fff;
-}
-
-header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
 header > .container,
@@ -36,9 +29,13 @@ footer > .container{
     padding-bottom: 16px;
 }
 
+header button{
+    font-size: 20px;
+    height: 50px;
+    width: 15%;
+}
+
 button{
-    display: block;
-    width: 100%;
     padding: 8px;
     border: none;
     background-color: #119756;
@@ -48,6 +45,12 @@ button{
     font-style: italic;
     cursor: pointer;
     border-radius: 6px;
+    border-bottom: 4px solid #000;
+}
+
+button:hover{
+    background-color: #005427;
+    text-transform: uppercase
 }
 
 .form_campo{
@@ -71,9 +74,27 @@ button{
     height: 120px;
 }
 form{
+    margin-top: 15px;
     max-width: 380px;
+    display: none;
+    margin-bottom: 290px;
 }
 
 form button{
-    max-width: 120px;
+    width: 100%;
+    max-width: 160px;
+    border-bottom: 4px solid #000;
+}
+
+form button:hover{
+    background-color: #005427;
+    text-transform: uppercase
+}
+
+#botao_cancelar{
+    background-color: red;
+}
+
+#botao_cancelar:hover{
+    background-color: #BD0303;
 }

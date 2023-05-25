@@ -9,10 +9,6 @@ $(document).ready(function(){
         $('nav').slideToggle();
     })
 
-    // $('#nome').mask('SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS', {
-    //     placeholder: 'fulano beltrano'
-    // })
-
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: '(12)32495-8264'
     })
@@ -43,7 +39,7 @@ $(document).ready(function(){
             console.log(form)
         },
         invalidHandler: function(e, validador){
-            let campoIncorretos = validador.numbersOfInvalids()
+            let campoIncorretos = validador.numberOfInvalids()
 
             if(campoIncorretos){
                 alert(`existem ${campoIncorretos} campos incorretos!`)
