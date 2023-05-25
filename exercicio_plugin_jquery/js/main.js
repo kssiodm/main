@@ -11,16 +11,19 @@ $(document).ready(function(){
         placeholder: 'seu nome'
     })
 
+    const ponto = '.';
+    const traco = '-'
+
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: '(12)32495-8264'
     })
 
-    $('#cpf').mask('00000000000', {
+    $('#cpf').mask(`000 ${ponto}000${ponto}000${traco}00`, {
         placeholder: '253.854.236-86'
     })
 
-    $('#cep').mask('00000000000', {
-        placeholder: '865.541.756-42'
+    $('#cep').mask(`00000${traco}000`, {
+        placeholder: '86554-352'
     })
 
     $('form').validate({
