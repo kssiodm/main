@@ -108,12 +108,13 @@ button:hover{
 
 @media screen and(min-width: 641px) and (max-width: 1023px){
     .texto h2, .texto p{
-        margin: 105px;
         text-align: justify;
+        margin-left: 0;
     }
 
     .produtos{
-        grid-template-columns: repeat(2,23%);
+        grid-template-columns: repeat(2,48%);
+        column-gap: 2%;
     }
 }
 
