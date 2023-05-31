@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #ef950e;
+    color: #fff;
+    padding: 16px 0 0;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a{
+    color: #ecf0f1;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.sobre_loja img{
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.texto h2, .texto p{
+    margin: 16px;
+    text-align: justify;
+}
+
+.texto h2{
+    margin-top: 0;
+}
+
+.texto h2{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #EF510E;
+}
+
+.produtos{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns:  repeat(4,23%);
+    column-gap: 2%;
+    row-gap: 2%;
+}
+
+.produto img{
+    max-width: 100%;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #119756;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: #006B00;
+}
+
+@media screen and (max-width) {
+    .produtos{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos .produtos{
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and(min-width: 641px) and (max-width: 1023px){
+    .texto h2, .texto p{
+        margin: 105px;
+        text-align: justify;
+    }
+
+    .produtos{
+        grid-template-columns: repeat(2,23%);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container_flex{
+        display: flex;
+    }
+}
