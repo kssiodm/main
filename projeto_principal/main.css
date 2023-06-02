@@ -15,7 +15,7 @@ html{
     margin: 0 auto;
 }
 
-header,footer{
+header{
     background-color: #8400ff;
     padding-top: 16px;
     color: #fff;
@@ -74,6 +74,10 @@ nav li a:hover{
     margin-bottom: 4px;
 }
 
+.menu_hamburger:hover{
+    background-color: #000;
+}
+
 .container_flex{
     display: flex;
 }
@@ -99,12 +103,13 @@ section h2{
 }
 
 .lista_conteudo{
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3,31%);
+    column-gap: 2%;
 }
 
 .lista_conteudo li{
     list-style: none;
-    max-width: 30%;
     margin-bottom: 24px;
 }
 
@@ -112,16 +117,8 @@ section h2{
     max-width: 100%;
 }
 
-.lista_conteudo li h3{
+.lista_conteudo li h3,
+.lista_conteudo li p{
     margin: 16px 0;
-}
-
-.item_central{
-    margin: 0 5%;
-}
-
-footer .container{
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
+    margin-top: 10px;
 }
