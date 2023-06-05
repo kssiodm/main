@@ -1,13 +1,3 @@
-$(document).ready(function(){
-    $('header button').click(function(e){
-        $('#form').slideDown();
-    })
-
-    $('#botao_cancelar').click(function(){
-        $('#form').slideUp();
-    })
-});
-
 function calcularIMC() {
     var peso = parseFloat(document.getElementById('peso').value);
     var altura = parseFloat(document.getElementById('altura').value);
