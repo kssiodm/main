@@ -122,3 +122,7 @@ section h2{
     margin: 16px 0;
     margin-top: 10px;
 }
+
+.lista_sup img{
+    height: 250px;
+}

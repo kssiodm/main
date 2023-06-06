@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <title>NavBar</title>
+        <style>
+            .navbar-nav .nav-link.active{
+                color: #fff;
+            }
+
+            .nav-link{
+                text-align: center;
+            }
+
+            section{
+                height: 100vh;
+                background-color: #ccc;
+                padding: 80px;
+            }
+            
+            header{
+                position: sticky;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="cabecalho">
+            <div class="navbar navbar-expand-lg">
+                <div class="container">
+                    <h1>Título do site</h1>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                        <ul class="nav navbar-nav' nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#inicio">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#produtos">produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#promocoes">promoções</a>
+                            </li>
+                            <li class="nav-item" class="nav-item">
+                                <a class="nav-link" href="#contato">contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button id="btn_checar_emails" class="btn btn-warning" type="button">checar caixa de entrada</button>
+                </div>
+            </div>
+        </header>
+
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="inicio">
+                <h2>Início</h2>
+            </section>
+            <section id="produtos">
+                <h2>produtos</h2>
+                <div class="container">
+                    <nav class="nav nav-tabs">
+                        <button data-bs-toggle="tab" data-bs-target="aba1" class="nav-link active" type="button">eletrônicos</button>
+                        <button data-bs-toggle="tab" data-bs-target="aba2" class="nav-link" type="button">masculino</button>
+                        <button data-bs-toggle="tab" data-bs-target="aba3" class="nav-link" type="button">feminino</button>
+                        <button data-bs-toggle="tab" data-bs-target="aba4" class="nav-link" type="button">infantil</button>
+                        <button data-bs-toggle="tab" data-bs-target="aba5" class="nav-link" type="button">jardim</button>
+                    </nav>
+                        <div class="tab-content">
+                            <div id="aba1" class="tab-pane active">
+                                conteúdo da aba eletrônicos
+                            </div>
+                            <div id="aba2"  class="tab-pane ">
+                                conteúdo da aba masculino
+                            </div>
+                            <div id="aba3" class="tab-pane ">
+                                conteúdo da aba feminino
+                            </div>
+                            <div id="aba4" class="tab-pane ">
+                                conteúdo da aba infantil
+                            </div>
+                            <div id="aba5" class="tab-pane ">
+                                conteúdo da aba jardim
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section id="promocoes">
+                <h2>promoções</h2>
+            </section>
+            <section id="contato">
+                <h2>contato</h2>
+            </section>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0">
+            <div id="mensagem_alerta" class="toast">
+                <header class="toast-header">
+                    <strong>Importante</strong>
+                </header>
+                <div class="toast-body">
+                        <p>Você tem 12 mensagens não lidas!</p>
+                    <div class="mt-2 pt-2 border-top">
+                        <button data-bs-dismiss="" class="btn btn-danger" type="button">
+                            Descartar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="lib/bootstrap.bundle.min.js"></script>
+        <script>
+            const ativarToast = document.getElementById('btn_checar_emails');
+            const mensagem = document.getElementById('mensagem_alerta')
+
+            if(ativarToast){
+                ativarToast.addEventListener('click', function(){
+                    const toast = new bootstrap.Toast(mensagem);
+                    toast.show();
+                })
+            }
+
+        </script>
+    </body>
+</html>
