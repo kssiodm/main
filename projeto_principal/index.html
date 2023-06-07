@@ -9,43 +9,62 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
-
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
         <title>Academia</title>
     </head>
     <body>
-        <header>
-            <div class="container container _flex">
-                    <h1>Academia</h1>
-                <div class="menu_hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-                <nav>
-                    <div class="container">
-                        <ul>
-                            <li>
-                                <a href="#conteudo">conteudo</a>
-                            </li>
-                            <li>
-                                <a href="#">suplementos</a>
-                            </li>
-                            <li>
-                                <a href="#">cadastro</a>
-                            </li>
-                            <li>
-                                <a href="#">Contato</a>
-                            </li>
-                            <li>
-                                <a href="#">perguntas frequentes</a>
-                            </li>
-                        </ul>
-                    </div>
+        <header class="navbar navbar-expand-lg sticky-top p-4">
+            <div class="container container_flex">
+                <h1 class="navbar-brand m-0">Academia</h1>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-naevgacao">
+                    <span class="navbar navbar-toggler-icon"></span>
+                </button>
+                <nav class="navbar-collapse collapse justify-content-end" id="menu-naevgacao">
+                    <ul class="nav nav-pills d-block d-md-flex">
+                        <li class="nav-item fw-bold">
+                            <a href="#sobre" class="nav-link active">
+                                Sobre a Academia
+                            </a>
+                        </li>
+                        <li class="nav-item fw-bold">
+                            <a href="#conteudo" class="nav-link">
+                                Conteúdo
+                            </a>
+                        </li>
+                        <li class="nav-item fw-bold">
+                            <a href="#modalidades" class="nav-link">
+                                <i class="bi bi-card-text me-1"></i>
+                                modalidades
+                            </a>
+                        </li>
+                        <li class="nav-item fw-bold">
+                            <a href="#suplementos" class="nav-link">
+                                <i class="bi bi-telephone me-1"></i>
+                                suplementos
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <div class="btn-group">
+                                    <button class="btn btn-success">
+                                        matricule-se
+                                    </button>
+                                    <button data-bs-toggle="dropdown" class="btn btn-success dropdown-toggle"></button>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li>
+                                            <a class="dropdown-item" href="#">contato</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">perguntas freq.</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                 </nav>
+
         </header>
         <section id="sobre"> 
             <div class="container container_flex">
@@ -63,7 +82,7 @@
 
         <section id="conteudo">
             <div class="container">
-                <h2>O que temos?</h2>
+                <h2>conteúdo</h2>
                 <ul class="container_flex lista_conteudo">
                     <li>
                         <img src="midia/maquinas_acad.png" alt="Maquinas de academia"/>
@@ -102,14 +121,14 @@
                         </li>
                         <li>
                             <img src="midia/danca.png" alt="aula de dança"/>
-                            <h3>Aula de dança</h3>
+                            <h3>Fit-Dance</h3>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, vero!
                             </p>
                         </li>
                         <li>
                             <img src="midia/boxe_2.png" alt="aula de boxe"/>
-                            <h3>Aula de box</h3>
+                            <h3>Boxe</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
                             </p>
@@ -128,13 +147,15 @@
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, ducimus.
                             </p>
+                            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#creatina">tenho interrese</button>
                         </li>
                         <li>
                             <img src="midia/whey2.png" alt="whey protein"/>
-                            <h3>whey protein - Black Skull</h3>
+                            <h3>whey - Black Skull</h3>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, vero!
                             </p>
+                            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#whey">tenho interrese</button>
                         </li>
                         <li>
                             <img src="midia/pre_treino2.png" alt="pré-treino"/>
@@ -142,10 +163,99 @@
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
                             </p>
+                            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#pre_treino">tenho interrese</button>
                         </li>
                     </ul>
                 </div>
             </section>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="container">
+                        <div class="modal" id="creatina" data-bs-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5>item interessado: Creatina</h5>
+                                        <button data-bs-dismiss="modal" type="button" class="btn-close" ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form">
+                                            <label class="form-label" for="nome">Nome</label>
+                                            <input class="form-control" type="text" id="nome">
+                                            <label class="form-label" for="numero">Numero</label>
+                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="endereco">endereço</label>
+                                            <input class="form-control" type="text" id="endereco">
+                                            <button class="btn btn-success" type="button">Enviar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h5>preço R$ 79,90</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <div class="modal" id="whey" data-bs-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5>item interessado: whey</h5>
+                                        <button data-bs-dismiss="modal" type="button" class="btn-close" ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form">
+                                            <label class="form-label" for="nome">Nome</label>
+                                            <input class="form-control" type="text" id="nome">
+                                            <label class="form-label" for="numero">Numero</label>
+                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="endereco">endereço</label>
+                                            <input class="form-control" type="text" id="endereco">
+                                            <button class="btn btn-success" type="button">Enviar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h5>preço: R$ 64,99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <div class="modal" id="pre_treino" data-bs-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5>item interessado: pré-treino</h5>
+                                        <button data-bs-dismiss="modal" type="button" class="btn-close" ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form">
+                                            <label class="form-label" for="nome">Nome</label>
+                                            <input class="form-control" type="text" id="nome">
+                                            <label class="form-label" for="numero">Numero</label>
+                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="endereco">endereço</label>
+                                            <input class="form-control" type="text" id="endereco">
+                                            <button class="btn btn-success" type="button">Enviar</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h5>preço: R$ 79,20</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="lib/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/main.js"></script>
     </body>
