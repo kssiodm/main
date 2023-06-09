@@ -10,12 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link rel="stylesheet" href="main.css">
 
         <title>Academia</title>
     </head>
     <body>
-        <header class="navbar navbar-expand-lg sticky-top p-4">
+        <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
             <div class="container container_flex">
                 <h1 class="navbar-brand m-0">Academia</h1>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-naevgacao">
@@ -25,11 +26,13 @@
                     <ul class="nav nav-pills d-block d-md-flex">
                         <li class="nav-item fw-bold">
                             <a href="#sobre" class="nav-link active">
+                                <i class="bi bi-house-door me-1"></i>
                                 Sobre a Academia
                             </a>
                         </li>
                         <li class="nav-item fw-bold">
                             <a href="#conteudo" class="nav-link">
+                                <i class="bi bi-card-text me-1"></i>
                                 Conteúdo
                             </a>
                         </li>
@@ -41,32 +44,39 @@
                         </li>
                         <li class="nav-item fw-bold">
                             <a href="#suplementos" class="nav-link">
-                                <i class="bi bi-telephone me-1"></i>
+                                <i class="bi bi-capsule"></i>
                                 suplementos
                             </a>
                         </li>
                         <li>
                             <div class="dropdown">
                                 <div class="btn-group">
-                                    <button class="btn btn-success">
+                                    <button class="btn btn-primary" id="matricular">
+                                        <i class="bi bi-clipboard2-check"></i>
                                         matricule-se
                                     </button>
-                                    <button data-bs-toggle="dropdown" class="btn btn-success dropdown-toggle"></button>
+                                    <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle"></button>
                                     <ul class="dropdown-menu dropdown-menu-dark">
                                         <li>
-                                            <a class="dropdown-item" href="#">contato</a>
+                                            <a class="dropdown-item" href="#contato">
+                                                <i class="bi bi-telephone me-1"></i>
+                                                contato
+                                            </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">perguntas freq.</a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-chat-right-text"></i>
+                                                perguntas freq.
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                 </nav>
-
         </header>
-        <section id="sobre"> 
+
+        <section id="sobre"  data-bs-target="#cabecalho"> 
             <div class="container container_flex">
                 <img class="sobre_academia" src="midia/academia.png" alt="Fachada da academia"/>
                 <div class="texto">
@@ -74,41 +84,44 @@
                     <p>
                         Nossa academia tem como interesse de manter o conforto de nossos frequentadores.além de promover
                         a saúde e bem estar de nossos frequentadores queremos que nossa academia seja um lugar de respeito
-                        comparada as outras e que agrade a todos e todos os plubicos que venham a frequentar nossa academia.
+                        comparada as outras e que agrade a todos e todos os publicos que venham a frequentar nossa academia.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="conteudo">
-            <div class="container">
-                <h2>conteúdo</h2>
-                <ul class="container_flex lista_conteudo">
-                    <li>
-                        <img src="midia/maquinas_acad.png" alt="Maquinas de academia"/>
-                        <h3>Máquinas</h3>
-                        <p>
-                            possuimos máquinas de todos os tipos para todos os exercicios de sua preferência
-                        </p>
-                    </li>
-                    <li>
-                        <img src="midia/halteres.png" alt="Halteres"/>
-                        <h3>Halteres</h3>
-                        <p>
-                            possuimos halteres de todos os tamanhos para você ultilizar
-                        </p>
-                    </li>
-                    <li>
-                        <img src="midia/pesos.png" alt="pesos"/>
-                        <h3>pesos</h3>
-                        <p>
-                            possuimos pesos de todos os tamahos para que todos poderem fazer exercicios
-                        </p>
-                    </li>
-                </ul>
-            </div>
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="conteudo" data-bs-spy="scroll" data-bs-target="#cabecalho">
+                <div class="container">
+                    <h2>conteúdo</h2>
+                    <ul class="container_flex lista_conteudo">
+                        <li>
+                            <img src="midia/maquinas_acad.png" alt="Maquinas de academia"/>
+                            <h3>Máquinas</h3>
+                            <p>
+                                possuimos máquinas de todos os tipos para todos os exercicios de sua preferência
+                            </p>
+                        </li>
+                        <li>
+                            <img src="midia/halteres.png" alt="Halteres"/>
+                            <h3>Halteres</h3>
+                            <p>
+                                possuimos halteres de todos os tamanhos para você ultilizar
+                            </p>
+                        </li>
+                        <li>
+                            <img src="midia/pesos.png" alt="pesos"/>
+                            <h3>pesos</h3>
+                            <p>
+                                possuimos pesos de todos os tamahos para que todos poderem fazer exercicios
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 
-            <section id="modalidades">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="modalidades" data-bs-spy="scroll" data-bs-target="#cabecalho">
                 <div class="container">
                     <h2>Nossas modalidades</h2>
                     <ul class="container_flex lista_conteudo">
@@ -136,8 +149,10 @@
                     </ul>
                 </div>
             </section>
+        </div>
 
-            <section id="suplementos">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="suplementos" data-bs-spy="scroll" data-bs-target="#cabecalho">
                 <div class="container">
                     <h2>Suplementos</h2>
                     <ul class="lista_conteudo lista_sup">
@@ -158,7 +173,7 @@
                             <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#whey">tenho interrese</button>
                         </li>
                         <li>
-                            <img src="midia/pre_treino2.png" alt="pré-treino"/>
+                            <img src="midia/pre_treino.png" alt="pré-treino"/>
                             <h3>pré-treino - Black Skull</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
@@ -168,6 +183,7 @@
                     </ul>
                 </div>
             </section>
+        </div>
 
             <div class="row">
                 <div class="col-4">
@@ -255,6 +271,47 @@
                     </div>
                 </div>
             </div>
+
+            <section id="contato" data-bs-spy="scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>Entre em contato:</h3>
+                            <form>
+                                <label class="form-label" for="nome">Nome</label>
+                                <input class="form-control" type="text" id="nome">
+                                <label class="form-label" for="numero">Numero</label>
+                                <input class="form-control" type="tel" id="numero">
+                                <label class="form-label" for="email">E-mail</label>
+                                <input class="form-control" type="email" id="email">
+                                <label class="form-label" for="mensagem">sua mensagem:</label>
+                                <textarea class=" form-control" id="mensagem"></textarea>
+                                <button class="btn btn-success" type="button">Enviar</button>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <h3>Nos acompanhe:</h3>
+                                    <ul class="social-links">
+                                        <li>
+                                            <a href="#" title="Siga-nos no Instagram">
+                                                <img src="midia/contato/instagram.png" alt="Logo do Instagram"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Siga-nos no Facebook">
+                                                <img src="midia/contato/facebook.png" alt="Logo do Facebook"/>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h4>patrocinador(a):</h4>
+                                    <h3>BlackSkull</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         <script src="lib/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/main.js"></script>

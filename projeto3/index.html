@@ -13,16 +13,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="navbar navbar-expand-lg sticky-top p-4">
+        <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
             <div class="container">
-                <h1 class="navbar-brand m-0">Nome do Restaurante</h1>
+                <h1 class="navbar-brand m-0 section-title">Nome do Restaurante</h1>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-naevgacao">
                     <span class="navbar navbar-toggler-icon"></span>
                 </button>
                 <nav class="navbar-collapse collapse justify-content-end" id="menu-naevgacao">
                     <ul class="nav nav-pills d-block d-md-flex">
                         <li class="nav-item fw-bold">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link ">
                                 <i class="bi bi-house-door me-1"></i>
                                 Sobre o Restaurante
                             </a>
@@ -49,6 +49,59 @@
                 </nav>
             </div>
         </header>
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="sobre-o-restaurante">
+                <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1500">
+                            <img src="./lib/images/slides/slide1.png" alt="ambiente do restaurante">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="./lib/images/slides/slide2.png" alt="taças de vinho">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="./lib/images/slides/slide3.png" alt="mesa com pratos">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+                <div class="pt-5 pb-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="./lib/images/restaurante.jpg" alt="imagem do restaurante" class="d-block w-100 rounded">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="section-title">Sobre o <span class="section-title">restaurante</span></h2>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est similique iure ex hic animi excepturi fugiat, perferendis a, nesciunt magni ratione dignissimos, ad error repellat quia reprehenderit earum exercitationem maxime!
+                                </p>
+                                <h3 class="section-title">Sobre o <span class="section-title">espaço</span></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci dolorum maiores natus quaerat sapiente rerum, recusandae ut minus itaque et expedita deleniti nulla animi, obcaecati, ratione voluptatibus repellat culpa.
+                                </p>
+                                <ul>
+                                    <li>item 1</li>
+                                    <li>item 2</li>
+                                    <li>item 3</li>
+                                    <li>item 4</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <script src="lib/bootstrap.bundle.min.js"></script>
     </body>
 </html>

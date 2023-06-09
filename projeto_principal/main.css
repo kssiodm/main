@@ -25,7 +25,6 @@ header{
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
 header > .container{
@@ -35,12 +34,20 @@ header > .container{
     padding-bottom: 12px;
 }
 
-.container_flex{
-    display: flex;
+.nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.sobre_academia{
+    margin-bottom: 50px;
 }
 
 .sobre_academia img{
     max-width: 480px;
+    display: grid;
+    grid-template-columns: 100%;
 }
 .texto h2, .texto p{
     margin: 16px;
@@ -49,6 +56,11 @@ header > .container{
 
 .texto h2{
     margin-top: 0;
+}
+
+.texto h2{
+    display: grid;
+    grid-template-columns: 100%;
 }
 
 section{
@@ -82,4 +94,68 @@ section h2{
 
 .lista_sup img{
     height: 250px;
+    align-items: center;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.social-links img{
+    height: 35px;
+}
+
+.social-links li{
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a{
+    text-decoration: none;
+}
+
+@media screen and (max-width) {
+    .lista_conteudo{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container_flex{
+        display: flex;
+    }
+
+    .lista_conteudo{
+        display: grid;
+        grid-template-columns: repeat(3,31%);
+        column-gap: 2%;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+    .texto h2, .texto p{
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .lista_conteudo{
+        grid-template-columns: repeat(2,48%);
+    }
+}
+
+@media screen and (max-width: 640px){
+    .texto h2, .texto p{
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .lista_conteudo{
+        grid-template-columns: 100%;
+    }
 }
