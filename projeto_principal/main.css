@@ -34,6 +34,10 @@ header > .container{
     padding-bottom: 12px;
 }
 
+.navbar-brand span{
+    color: #2ecc71;
+}
+
 .nav .nav-link,
 .navbar-brand,
 .navbar-brand:hover{
@@ -65,6 +69,8 @@ header > .container{
 
 section{
     padding: 48px 0;
+    /* height: 100vh; */
+    /* padding: 80px; */
 }
 
 section h2{

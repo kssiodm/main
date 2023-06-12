@@ -12,18 +12,41 @@ body{
 
 .nav .nav-link,
 .navbar-brand,
-.navbar-brand:hover{
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover{
     color: #fff;
+}
+
+.nav-toggler, #cardapio{
+    background-color: #ffeae6;
 }
 
 .section-title{
     font-family: 'pacifico',cursive;
 }
 
-.section-title span{
+#sobre-o-restaurante{
+    background-color: #ffeae6;
+}
+
+.text-colored{
     color: #e15f41;
 }
 
-#sobre-o-restaurante{
-    background-color: #ffeae6;
+.nav-cardapio .nav-link.active{
+    background-color: #fff;
+    color: #e15f41;
+}
+
+.nav-cardapio .nav-link{
+    color: #e15f41;
+}
+
+.social-links li{
+    list-style: none;
+    display: inline;
+}
+
+.social-links a{
+    text-decoration: none;
 }
