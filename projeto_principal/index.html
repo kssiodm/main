@@ -7,7 +7,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -18,7 +18,7 @@
     <body>
         <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
             <div class="container container_flex">
-                <h1 class="navbar-brand m-0"><span>fit</span>-body</h1>
+                <h1 class="navbar-brand m-0"><span>FIT</span>-body</h1>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-naevgacao">
                     <span class="navbar navbar-toggler-icon"></span>
                 </button>
@@ -76,7 +76,7 @@
                 </nav>
         </header>
 
-        <section id="sobre"  data-bs-target="#cabecalho"> 
+        <section id="sobre"  data-bs-target="#cabecalho" data-bs-smooth-scroll="true"> 
             <div class="container container_flex">
                 <img class="sobre_academia" src="midia/academia.png" alt="Fachada da academia"/>
                 <div class="texto">
@@ -91,7 +91,7 @@
         </section>
 
         <div data-bs-spy="scroll" data-bs-target="#cabecalho">
-            <section id="conteudo" data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="conteudo" data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
                 <div class="container">
                     <h2>conteúdo</h2>
                     <ul class="container_flex lista_conteudo">
@@ -120,13 +120,13 @@
                 </div>
         </div>
 
-        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
             <section id="modalidades" data-bs-spy="scroll" data-bs-target="#cabecalho">
                 <div class="container">
                     <h2>Nossas modalidades</h2>
                     <ul class="container_flex lista_conteudo">
                         <li>
-                            <img src="midia/pilatesv3.png" alt="mulher fazendo pilates"/>
+                            <img class="rounded" src="midia/pilatesv3.png" alt="mulher fazendo pilates"/>
                             <h3>Pilates</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, ducimus.
@@ -141,7 +141,7 @@
                         </li>
                         <li>
                             <img src="midia/boxe_2.png" alt="aula de boxe"/>
-                            <h3>Boxe</h3>
+                            <h3>Muay thai</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
                             </p>
@@ -151,7 +151,7 @@
             </section>
         </div>
 
-        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
             <section id="suplementos" data-bs-spy="scroll" data-bs-target="#cabecalho">
                 <div class="container">
                     <h2>Suplementos</h2>
@@ -197,13 +197,13 @@
                                     </div>
                                     <div class="modal-body">
                                         <form class="form">
-                                            <label class="form-label" for="nome">Nome</label>
-                                            <input class="form-control" type="text" id="nome">
-                                            <label class="form-label" for="numero">Numero</label>
-                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="nome_modal1">Nome</label>
+                                            <input class="form-control" type="text" id="nome_modal1" name="nome_modal1" placeholder="seu nome">
+                                            <label class="form-label" for="tel_modal1">Telefone</label>
+                                            <input class="form-control" type="tel" id="tel_modal1" name="tel_modal1">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco">
-                                            <button class="btn btn-success" type="submit">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco" placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -225,13 +225,13 @@
                                     </div>
                                     <div class="modal-body">
                                         <form class="form">
-                                            <label class="form-label" for="nome">Nome</label>
-                                            <input class="form-control" type="text" id="nome">
-                                            <label class="form-label" for="numero">Numero</label>
-                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="nome_modal2">Nome</label>
+                                            <input class="form-control" type="text" id="nome_modal2" name="nome_modal2" placeholder="seu nome">
+                                            <label class="form-label" for="tel_modal2">Telefone</label>
+                                            <input class="form-control" type="tel" id="tel_modal2" name="tel_modal2">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco">
-                                            <button class="btn btn-success" type="submit">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco"  placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -253,13 +253,13 @@
                                     </div>
                                     <div class="modal-body">
                                         <form class="form">
-                                            <label class="form-label" for="nome">Nome</label>
-                                            <input class="form-control" type="text" id="nome">
-                                            <label class="form-label" for="numero">Numero</label>
-                                            <input class="form-control" type="tel" id="numero">
+                                            <label class="form-label" for="nome_modal3">Nome</label>
+                                            <input class="form-control" type="text" id="nome_modal3" name="nome_modal3" placeholder="seu nome">
+                                            <label class="form-label" for="tel_modal3">Numero</label>
+                                            <input class="form-control" type="tel" id="tel_modal3" name="tel_modal3">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco">
-                                            <button class="btn btn-success" type="submit">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco"  placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -284,13 +284,13 @@
                                             <button data-bs-dismiss="modal" type="button" class="btn-close" ></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="form">
-                                                <label class="form-label" for="nome">Nome Completo:</label>
-                                                <input class="form-control" type="text" id="nome">
-                                                <label class="form-label" for="numero">Numero:</label>
-                                                <input class="form-control" type="tel" id="numero">
-                                                <label class="form-label" for="email">E-mail:</label>
-                                                <input class="form-control" type="email" id="email">
+                                            <form id="form">
+                                                <label class="form-label" for="nome1">Nome Completo:</label>
+                                                <input class="form-control" type="text" name="nome1" id="nome1" placeholder="seu nome">
+                                                <label class="form-label" for="telefone1">Telefone:</label>
+                                                <input class="form-control" type="tel" name="telefone1" id="telefone1" placeholder="seu numero">
+                                                <label class="form-label" for="email1">E-mail:</label>
+                                                <input class="form-control" type="email1" name="email1" id="email1" placeholder="seu e-mail">
                                                 <label class="form-label">Escolha uma de nossas unidades:</label>
                                                 <select class="form-select">
                                                     <option selected>Viamão </option>
@@ -300,7 +300,7 @@
                                                     <option>Pelotas</option>
                                                 </select>
                                                 <div class="modal-footer">
-                                                <button class="btn btn-success" type="submit">Enviar</button>
+                                                <button class="btn btn-success" id="submit_button1" type="button" data-bs-dismiss="modal">Enviar</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -316,16 +316,16 @@
                     <div class="row">
                         <div class="col-6">
                             <h3>Entre em contato:</h3>
-                            <form>
-                                <label class="form-label" for="nome">Nome:</label>
-                                <input class="form-control" type="text" id="nome">
-                                <label class="form-label" for="numero">Numero:</label>
-                                <input class="form-control" type="tel" id="numero">
-                                <label class="form-label" for="email">E-mail:</label>
-                                <input class="form-control" type="email" id="email">
+                            <form id="form">
+                                <label class="form-label" for="nome2">Nome:</label>
+                                <input class="form-control" type="text" name="nome2" id="nome2" placeholder="seu nome">
+                                <label class="form-label" for="numero">Telefone:</label>
+                                <input class="form-control" type="tel" name="telefone2" id="telefone2" placeholder="seu numero">
+                                <label class="form-label" for="email2">E-mail:</label>
+                                <input class="form-control" type="email" name="email2" id="email2" placeholder="seu e-mail">
                                 <label class="form-label" for="mensagem">sua mensagem:</label>
-                                <textarea class=" form-control" id="mensagem"></textarea>
-                                <button class="btn btn-success" type="submit">Enviar</button>
+                                <textarea class="form-control" name="mensagem" id="mensagem" placeholder="sua mensagem"></textarea>
+                                <button class="btn btn-success" id="submit_button2" type="submit">Enviar</button>
                             </form>
                         </div>
                         <div class="col-6">
@@ -434,10 +434,12 @@
                 </div>
             </section>
         <script src="lib/bootstrap.bundle.min.js"></script>
+        
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="js/jquery.mask.min.js"></script>
-        <script src="js/jquery.validate.min.js"></script>
-        <script src="js/messages_pt_BR.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="./js/jquery.mask.min.js"></script>
+        <script src="./js/jquery.validate.min.js"></script>
+        <script src="./js/messages_pt_BR.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

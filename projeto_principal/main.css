@@ -1,8 +1,5 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', 'sans-serif'
+    font-family: 'roboto' sans-serif;
 }
 
 html{
@@ -34,6 +31,11 @@ header > .container{
     padding-bottom: 12px;
 }
 
+.navbar-brand{
+    font-weight: 400;
+    font-family: 'Anton', sans-serif;
+}
+
 .navbar-brand span{
     color: #2ecc71;
 }
@@ -46,6 +48,7 @@ header > .container{
 
 .sobre_academia{
     margin-bottom: 50px;
+    background-color: #b2eefcec;
 }
 
 .sobre_academia img{
@@ -69,8 +72,6 @@ header > .container{
 
 section{
     padding: 48px 0;
-    /* height: 100vh; */
-    /* padding: 80px; */
 }
 
 section h2{
@@ -122,6 +123,13 @@ textarea{
     text-decoration: none;
 }
 
+.accordion-button{
+    background-color: rgb(96, 158, 238);
+}
+
+#sobre{
+    background-color: rgba(211, 236, 245, 0.719);
+}
 @media screen and (max-width) {
     .lista_conteudo{
         display: block;

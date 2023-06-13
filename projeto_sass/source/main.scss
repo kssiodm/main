@@ -1,0 +1,18 @@
+$corprincipal: #eee;
+$cortexto:#000;
+
+body{
+    background-color: $corprincipal;
+}
+
+header{
+    color: $corprincipal;
+}
+
+header{
+    background-color: $corprincipal;
+
+    h1{
+        color: $cortexto;
+    }
+}
