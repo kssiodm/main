@@ -15,6 +15,7 @@
 
         <title>fit-body</title>
     </head>
+    <!-- cabeçalho do site -->
     <body>
         <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
             <div class="container container_flex">
@@ -51,20 +52,20 @@
                         <li>
                             <div class="dropdown">
                                 <div class="btn-group">
-                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#matricular">
+                                    <button class="btn btn-primary botao_matricula" data-bs-toggle="modal" data-bs-target="#matricular">
                                         <i class="bi bi-clipboard2-check"></i>
                                         matricule-se
                                     </button>
                                     <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle"></button>
                                     <ul class="dropdown-menu dropdown-menu-dark">
                                         <li>
-                                            <a class="dropdown-item" href="#contato">
+                                            <a class="dropdown-item butao_sec" href="#contato">
                                                 <i class="bi bi-telephone me-1"></i>
                                                 contato
                                             </a>
                                         </li>
                                         <li data-bs-toggle="modal" data-bs-target="#perguntas_freq">
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item butao_sec" href="#">
                                                 <i class="bi bi-chat-right-text"></i>
                                                 perguntas freq.
                                             </a>
@@ -76,11 +77,13 @@
                 </nav>
         </header>
 
+        <!-- sobre o site  -->
+
         <section id="sobre"  data-bs-target="#cabecalho" data-bs-smooth-scroll="true"> 
             <div class="container container_flex">
                 <img class="sobre_academia" src="midia/academia.png" alt="Fachada da academia"/>
                 <div class="texto">
-                    <h2>Sobre a academia</h2>
+                    <h2 class="titulos">Sobre a <span>academia</span></h2>
                     <p>
                         Nossa academia tem como interesse de manter o conforto de nossos frequentadores.além de promover
                         a saúde e bem estar de nossos frequentadores queremos que nossa academia seja um lugar de respeito
@@ -90,60 +93,64 @@
             </div>
         </section>
 
-        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
-            <section id="conteudo" data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
+        <!-- conteudo -->
+
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
+            <section id="conteudo" >
                 <div class="container">
-                    <h2>conteúdo</h2>
+                    <h2 class="text-center titulos"> Nosso <span>conteúdo</span> </h2>
                     <ul class="container_flex lista_conteudo">
                         <li>
                             <img src="midia/maquinas_acad.png" alt="Maquinas de academia"/>
                             <h3>Máquinas</h3>
                             <p>
-                                possuimos máquinas de todos os tipos para todos os exercicios de sua preferência
+                                possuimos máquinas de todos os tipos para todos os exercicios de sua preferência.
                             </p>
                         </li>
                         <li>
                             <img src="midia/halteres.png" alt="Halteres"/>
                             <h3>Halteres</h3>
                             <p>
-                                possuimos halteres de todos os tamanhos para você ultilizar
+                                possuimos halteres de todos os tamanhos para você ultilizar.
                             </p>
                         </li>
                         <li>
                             <img src="midia/pesos.png" alt="pesos"/>
                             <h3>pesos</h3>
                             <p>
-                                possuimos pesos de todos os tamahos para que todos poderem fazer exercicios
+                                possuimos pesos de todos os tamahos para que todos poderem fazer exercicios.
                             </p>
                         </li>
                     </ul>
                 </div>
         </div>
 
+        <!-- modalidades -->
+
         <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
-            <section id="modalidades" data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="modalidades">
                 <div class="container">
-                    <h2>Nossas modalidades</h2>
+                    <h2 class="text-center titulos">Nossas <span>modalidades</span> </h2>
                     <ul class="container_flex lista_conteudo">
                         <li>
                             <img class="rounded" src="midia/pilatesv3.png" alt="mulher fazendo pilates"/>
                             <h3>Pilates</h3>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, ducimus.
+                                aulas de 40 minutos todas terças e quintas as 18:00 horas.
                             </p>
                         </li>
                         <li>
                             <img src="midia/danca.png" alt="aula de dança"/>
                             <h3>Fit-Dance</h3>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, vero!
+                                aulas de 50 minutos todas segundas e sextas as 18:00 horas.
                             </p>
                         </li>
                         <li>
                             <img src="midia/boxe_2.png" alt="aula de boxe"/>
                             <h3>Muay thai</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
+                                aulas de 50 minutos todas quartas e sextas as 19:00 horas.
                             </p>
                         </li>
                     </ul>
@@ -151,16 +158,18 @@
             </section>
         </div>
 
+        <!-- suplmentos -->
+
         <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
-            <section id="suplementos" data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="suplementos">
                 <div class="container">
-                    <h2>Suplementos</h2>
+                    <h2 class="text-center titulos">Nossos <span>Suplementos</span> </h2>
                     <ul class="lista_conteudo lista_sup">
                         <li>
                             <img src="midia/creatina.png" alt="creatina"/>
                             <h3>Creatina - Black Skull</h3>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, ducimus.
+                                utilizado para quem quer render mais no treino.
                             </p>
                             <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#creatina">tenho interrese</button>
                         </li>
@@ -168,7 +177,7 @@
                             <img src="midia/whey2.png" alt="whey protein"/>
                             <h3>whey - Black Skull</h3>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, vero!
+                                whey protein é utilizado para conseguir mais proteinas. 
                             </p>
                             <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#whey">tenho interrese</button>
                         </li>
@@ -176,7 +185,7 @@
                             <img src="midia/pre_treino.png" alt="pré-treino"/>
                             <h3>pré-treino - Black Skull</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, neque.
+                                usado para conseguir mais energia durante o treino.
                             </p>
                             <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#pre_treino">tenho interrese</button>
                         </li>
@@ -184,6 +193,8 @@
                 </div>
             </section>
         </div>
+
+        <!-- modais dos suplementos -->
 
             <div class="row">
                 <div class="col-4">
@@ -202,8 +213,8 @@
                                             <label class="form-label" for="tel_modal1">Telefone</label>
                                             <input class="form-control" type="tel" id="tel_modal1" name="tel_modal1">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco" placeholder="endereço">
-                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco1" placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal" id="modal_b_1">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -230,8 +241,8 @@
                                             <label class="form-label" for="tel_modal2">Telefone</label>
                                             <input class="form-control" type="tel" id="tel_modal2" name="tel_modal2">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco"  placeholder="endereço">
-                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco2"  placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal" id="modal_b_2">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -258,8 +269,8 @@
                                             <label class="form-label" for="tel_modal3">Numero</label>
                                             <input class="form-control" type="tel" id="tel_modal3" name="tel_modal3">
                                             <label class="form-label" for="endereco">endereço</label>
-                                            <input class="form-control" type="text" id="endereco"  placeholder="endereço">
-                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Enviar</button>
+                                            <input class="form-control" type="text" id="endereco3"  placeholder="endereço">
+                                            <button class="btn btn-success" type="button" data-bs-dismiss="modal" id="modal_b_3">Enviar</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -271,6 +282,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- formulario de matricula -->
 
             <section id="matricula">
                 <div class="row">
@@ -300,7 +313,7 @@
                                                     <option>Pelotas</option>
                                                 </select>
                                                 <div class="modal-footer">
-                                                <button class="btn btn-success" id="submit_button1" type="button" data-bs-dismiss="modal">Enviar</button>
+                                                <button class="btn btn-success" id="submit_button1"  type="button" data-bs-dismiss="modal">Enviar</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -311,12 +324,15 @@
                     </div>
                 </div>
             </section>
+
+            <!-- formulario de contato e divulgação -->
+
             <section id="contato">
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
-                            <h3>Entre em contato:</h3>
-                            <form id="form">
+                            <h3 class="titulos">Entre em <span>contato:</span></h3>
+                            <form id="form2">
                                 <label class="form-label" for="nome2">Nome:</label>
                                 <input class="form-control" type="text" name="nome2" id="nome2" placeholder="seu nome">
                                 <label class="form-label" for="numero">Telefone:</label>
@@ -330,7 +346,7 @@
                         </div>
                         <div class="col-6">
                             <div>
-                                <h3>Nos acompanhe:</h3>
+                                <h3 class="titulos">Nos <span>acompanhe:</span></h3>
                                     <ul class="social-links">
                                         <li>
                                             <a href="#" title="Siga-nos no Instagram">
@@ -350,6 +366,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- perguntas e respostas -->
 
             <section id="perguntas">
                 <div class="row">
@@ -433,13 +451,19 @@
                     </div>
                 </div>
             </section>
+
+            <footer>
+                <div class="container">
+                    <h6 class="titulos">
+                        2023 &copy; <span>FIT</span>-body - Todos os direitos reservados
+                    </h6>
+                </div>
+            </footer>
         <script src="lib/bootstrap.bundle.min.js"></script>
         
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="./js/jquery.mask.min.js"></script>
-        <script src="./js/jquery.validate.min.js"></script>
-        <script src="./js/messages_pt_BR.min.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

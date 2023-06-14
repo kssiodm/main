@@ -12,7 +12,7 @@ html{
     margin: 0 auto;
 }
 
-header{
+header,footer{
     background-color: #8400ff;
     padding-top: 12px;
     color: #fff;
@@ -31,12 +31,14 @@ header > .container{
     padding-bottom: 12px;
 }
 
-.navbar-brand{
+.navbar-brand,
+.titulos{
     font-weight: 400;
     font-family: 'Anton', sans-serif;
 }
 
-.navbar-brand span{
+.navbar-brand span,
+.titulos span{
     color: #2ecc71;
 }
 
@@ -44,6 +46,12 @@ header > .container{
 .navbar-brand,
 .navbar-brand:hover{
     color: #fff;
+}
+
+.botao_matricula,
+.butao_sec{
+    color: #fff;
+    font-weight: bold;
 }
 
 .sobre_academia{
@@ -130,6 +138,15 @@ textarea{
 #sobre{
     background-color: rgba(211, 236, 245, 0.719);
 }
+
+footer{
+    padding-bottom: 5px;
+}
+
+footer > .container{
+    display: flex;
+    align-items: center;
+}
 @media screen and (max-width) {
     .lista_conteudo{
         display: block;
@@ -156,6 +173,12 @@ textarea{
     .texto h2, .texto p{
         text-align: left;
         margin-left: 0;
+    }
+
+    .sobre_academia img{
+        max-width: 480px;
+        display: grid;
+        grid-template-columns: 100%;
     }
 
     .lista_conteudo{
