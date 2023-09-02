@@ -38,8 +38,8 @@ $(document).ready(function(){
         submitHandler: function(form){
             console.log(form)
         },
-        invalidHandler: function(e, validador){
-            let campoIncorretos = validador.numberOfInvalids()
+        invalidHandler: function(e, validador) {
+            let campoIncorretos = validador.numberOfInvalids();
 
             if(campoIncorretos){
                 alert(`existem ${campoIncorretos} campos incorretos!`)
@@ -51,10 +51,19 @@ $(document).ready(function(){
         const destino = $('#formulario');
         const nomeVeiculo = $(this).parent().find('h3').text();
 
-        $('#lista_veiculos').val(nomeVeiculo);
+        $('#veiculo_interesse').val(nomeVeiculo);
 
         $('html').animate({
             scrollTop: destino.offset().top
         }, 1000)
+    })
+
+    $('#sendTo').click(function(){
+    alert('Formulário enviado');
+    $('#veiculo_interesse').val('');
+    $('#nome').val('');
+    $('#telefone').val('');
+    $('#email').val('');
+    $('#mensagem').val('');
     })
 })

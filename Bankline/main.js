@@ -26,8 +26,8 @@ form.addEventListener('submit', function(e){
         containerMenssagemSucesso.style.display = 'block';
 
         nomeBeneficiario.value = '';
-        // valorDeposito = '';
-        // numeroConta = '';
+        valorDeposito.value = '';
+        numeroConta.value = '';
     }else{
         nomeBeneficiario.style.border = '1px solid red';
         document.querySelector('.mensagem_erro').style.display = 'block'
@@ -44,10 +44,11 @@ nomeBeneficiario.addEventListener('keyup',function(e){
     formValido = validaNome(e.target.value);
 
     if(!formValido){
-        nomeBeneficiario.classList.add('error');
-        document.querySelector('mensagem_erro').style.display = 'none';
+        nomeBeneficiario.classList.remove('error');
+        document.querySelector('.mensagem_erro').style.display = 'none';
     }else{
-        nomeBeneficiario.classList.none('error');
-        document.querySelector('mensagem_erro').style.display = 'block';
+        nomeBeneficiario.classList.add('error');
+        document.querySelector('.mensagem_erro').style.display = 'block';
+
     }
 })
