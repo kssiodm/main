@@ -46,27 +46,6 @@ $(document).ready(function(){
 
     //validação da matricula e do contato
 
-    // $("#submit_button1").click(function() {
-    // var nome1 = $("#nome1").val();
-    // var email1 = $("#email1").val();
-    // var num1 =$('#telefone1').val()
-
-    // var regex = /\S+@\S+\.\S+/;
-
-    // if (nome1 === "" || email1 === "" || num1 == "") {
-    //     alert("Por favor, preencha todos os campos!");
-    // return false;
-    // }
-
-    // if (!regex.test(email1)) {
-    //     alert("Por favor, insira um endereço de e-mail válido!");
-    //     return false;
-    // };
-
-    // alert("Formulário enviado com sucesso!");
-    // $("#formulario").submit();
-    // })
-
     $(document).ready(function() {
         $("#submit_button1").click(function() {
             var nome1 = $("#nome1").val();
@@ -85,11 +64,9 @@ $(document).ready(function(){
                 return false;
             }
     
-            // Se tudo estiver válido, você pode enviar o formulário ou realizar a ação necessária aqui
             $("#validationAlert").hide();
             $("#form").submit(); 
     
-            // Fechar o modal manualmente se necessário
             $('#matricular').modal('hide');
         });
     });
