@@ -57,18 +57,30 @@ function showQuestion(question) {
             <h5>${question.question}</h5>
         </div>
         ${question.answers.map((answer, index) => `
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer${index}" value="${answer.correct}">
+            <div class="answer-block" onclick="selectAnswer(${index})">
+                <input class="form-check-input" type="radio" name="answer" id="answer${index}" value="${answer.correct}" style="display: none;">
                 <label class="form-check-label" for="answer${index}">
                     ${answer.text}
                 </label>
             </div>
         `).join('')}
     `;
+    // Ocultar a mensagem de erro ao exibir uma nova pergunta
+    document.getElementById('error-message').style.display = 'none';
+}
+
+function selectAnswer(index) {
+    const selectedAnswer = document.getElementById(`answer${index}`);
+    selectedAnswer.checked = true;
+    document.querySelectorAll('.answer-block').forEach(block => block.classList.remove('selected'));
+    selectedAnswer.closest('.answer-block').classList.add('selected');
+    // Ocultar a mensagem de erro ao selecionar uma resposta
+    document.getElementById('error-message').style.display = 'none';
 }
 
 function nextQuestion() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    const errorMessage = document.getElementById('error-message');
     if (selectedAnswer) {
         if (selectedAnswer.value === 'true') {
             score++;
@@ -80,9 +92,11 @@ function nextQuestion() {
             showResult();
         }
     } else {
-        alert("Por favor, selecione uma resposta.");
+        errorMessage.textContent = 'Por favor, selecione uma resposta.';
+        errorMessage.style.display = 'block';
     }
 }
+
 
 function showResult() {
     const quizContainer = document.getElementById('quiz-container');
