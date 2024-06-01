@@ -9,14 +9,25 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="card">
+        <div id="menu-container" class="card">
             <div class="card-body">
-                <h2 class="card-title text-center">Jogo de Matemática</h2>
-                <div id="quiz-container">
-                    <!-- O conteúdo do jogo será inserido aqui pelo JavaScript -->
+                <h5 class="card-title">Bem-vindo ao Quiz de Matemática</h5>
+                <p class="card-text">Teste seus conhecimentos em matemática. Clique no botão abaixo para começar.</p>
+                <div class="menu-btns">
+                    <button id="start-btn" class="btn btn-primary">Iniciar</button>
+                    <!-- <button id="info-btn" class="btn btn-secondary">Regras/Sobre</button> -->
                 </div>
-                <div id="error-message" class="text-danger mt-2" style="display: none;"></div>
-                <button id="next-btn" class="btn btn-primary mt-3" onclick="nextQuestion()">Próxima Pergunta</button>
+            </div>
+        </div>
+        <div id="quiz-container" class="card" style="display: none;">
+            <div class="card-body">
+                <div id="question-container"></div>
+                <div id="error-message" class="error-message"></div>
+                <button id="next-btn" class="btn btn-primary mt-3" onclick="nextQuestion()">Próximo</button>
+            </div>
+        </div>
+        <div id="result-container" class="card" style="display: none;">
+            <div class="card-body">
                 <div id="result" class="mt-3"></div>
             </div>
         </div>

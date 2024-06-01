@@ -6,7 +6,8 @@ const questions = [
             { text: "7", correct: false },
             { text: "9", correct: false },
             { text: "6", correct: false }
-        ]
+        ],
+        difficulty: "easy" // fácil: 1 ponto
     },
     {
         question: "Qual é o resultado de 10 - 6?",
@@ -15,7 +16,8 @@ const questions = [
             { text: "3", correct: false },
             { text: "5", correct: false },
             { text: "6", correct: false }
-        ]
+        ],
+        difficulty: "easy" // fácil: 1 ponto
     },
     {
         question: "Qual é o resultado de 7 x 2?",
@@ -24,7 +26,8 @@ const questions = [
             { text: "12", correct: false },
             { text: "13", correct: false },
             { text: "15", correct: false }
-        ]
+        ],
+        difficulty: "medium" // médio: 2 pontos
     },
     {
         question: "Qual é o resultado de 9 / 3?",
@@ -33,26 +36,43 @@ const questions = [
             { text: "2", correct: false },
             { text: "4", correct: false },
             { text: "1", correct: false }
-        ]
+        ],
+        difficulty: "medium" // médio: 2 pontos
     },
     {
-        question: "Qual é o resultado de 5 x 5?",
+        question: "Qual é a raiz quadrada de 144?",
         answers: [
-            { text: "25", correct: true },
-            { text: "20", correct: false },
-            { text: "30", correct: false },
-            { text: "15", correct: false }
-        ]
+            { text: "12", correct: true },
+            { text: "10", correct: false },
+            { text: "14", correct: false },
+            { text: "16", correct: false }
+        ],
+        difficulty: "hard" // difícil: 3 pontos
+    },
+    {
+        question: "Qual é o valor de pi (π) até duas casas decimais?",
+        answers: [
+            { text: "3.14", correct: true },
+            { text: "3.15", correct: false },
+            { text: "3.13", correct: false },
+            { text: "3.16", correct: false }
+        ],
+        difficulty: "hard" // difícil: 3 pontos
     }
-    
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
 
+const points = {
+    easy: 1,
+    medium: 2,
+    hard: 3
+};
+
 function showQuestion(question) {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
+    const questionContainer = document.getElementById('question-container');
+    questionContainer.innerHTML = `
         <div class="mb-4">
             <h5>${question.question}</h5>
         </div>
@@ -65,7 +85,6 @@ function showQuestion(question) {
             </div>
         `).join('')}
     `;
-    // Ocultar a mensagem de erro ao exibir uma nova pergunta
     document.getElementById('error-message').style.display = 'none';
 }
 
@@ -74,7 +93,6 @@ function selectAnswer(index) {
     selectedAnswer.checked = true;
     document.querySelectorAll('.answer-block').forEach(block => block.classList.remove('selected'));
     selectedAnswer.closest('.answer-block').classList.add('selected');
-    // Ocultar a mensagem de erro ao selecionar uma resposta
     document.getElementById('error-message').style.display = 'none';
 }
 
@@ -83,7 +101,7 @@ function nextQuestion() {
     const errorMessage = document.getElementById('error-message');
     if (selectedAnswer) {
         if (selectedAnswer.value === 'true') {
-            score++;
+            score += points[questions[currentQuestionIndex].difficulty];
         }
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
@@ -97,19 +115,50 @@ function nextQuestion() {
     }
 }
 
-
 function showResult() {
     const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = '';
-    const resultContainer = document.getElementById('result');
-    resultContainer.innerHTML = `Você acertou ${score} de ${questions.length} perguntas.`;
-    document.getElementById('next-btn').style.display = 'none';
+    quizContainer.style.display = 'none';
+    const resultContainer = document.getElementById('result-container');
+    resultContainer.style.display = 'block';
+    const resultContent = document.getElementById('result');
+    resultContent.innerHTML = `Você acertou ${score} pontos.<br>`;
+
+    // Adicionar mensagem personalizada baseada na pontuação
+    let message = '';
+    let messageClass = '';
+    const maxScore = questions.reduce((total, question) => total + points[question.difficulty], 0);
+    const halfScore = maxScore / 2;
+
+    if (score === 0) {
+        message = 'Você errou todas as perguntas. Tente novamente!';
+        messageClass = 'result-red';
+    } else if (score < halfScore) {
+        message = 'Você errou a maioria das perguntas. Continue praticando!';
+        messageClass = 'result-orange';
+    } else if (score === halfScore) {
+        message = 'Você acertou metade das perguntas. Bom trabalho!';
+        messageClass = 'result-yellow';
+    } else if (score < maxScore) {
+        message = 'Você acertou a maioria das perguntas. Muito bem!';
+        messageClass = 'result-light-green';
+    } else {
+        message = 'Parabéns! Você acertou todas as perguntas!';
+        messageClass = 'result-dark-green';
+    }
+
+    resultContent.innerHTML += `<span class="${messageClass}">${message}</span>`;
 
     const restartButton = document.createElement('button');
     restartButton.className = 'btn btn-secondary mt-3 restart-btn';
     restartButton.textContent = 'Recomeçar';
     restartButton.onclick = restartQuiz;
-    resultContainer.appendChild(restartButton);
+    resultContent.appendChild(restartButton);
+
+    const menuButton = document.createElement('button');
+    menuButton.className = 'btn btn-secondary mt-3 menu-btn';
+    menuButton.textContent = 'Voltar ao Menu';
+    menuButton.onclick = showMenu;
+    resultContent.appendChild(menuButton);
 }
 
 function restartQuiz() {
@@ -118,8 +167,23 @@ function restartQuiz() {
     document.getElementById('result').innerHTML = '';
     document.getElementById('next-btn').style.display = 'block';
     showQuestion(questions[currentQuestionIndex]);
+    document.getElementById('quiz-container').style.display = 'block';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function showMenu() {
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('menu-container').style.display = 'block';
+    document.getElementById('quiz-container').style.display = 'none';
+}
+
+function startQuiz() {
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'block';
     showQuestion(questions[currentQuestionIndex]);
+}
+
+document.getElementById('start-btn').addEventListener('click', startQuiz);
+
+document.addEventListener('DOMContentLoaded', () => {
+    showMenu();
 });

@@ -5,6 +5,16 @@ body {
     max-width: 600px;
     margin: auto;
 }
+
+.menu-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-btns button {
+    margin-bottom: 10px;
+}
+
 #result {
     font-size: 1.5em;
     font-weight: bold;
@@ -42,4 +52,24 @@ body {
     padding: 10px;
     margin-top: 10px;
     text-align: center;
+}
+
+.result-red {
+    color: #a81818;
+}
+
+.result-orange {
+    color: #b34a09;
+}
+
+.result-yellow {
+    color: #c8bf10;
+}
+
+.result-light-green {
+    color: #16782d;
+}
+
+.result-dark-green {
+    color: #0d460b;
 }
