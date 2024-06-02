@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Matemática</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -14,8 +15,8 @@
                 <h5 class="card-title">Bem-vindo ao Quiz de Matemática</h5>
                 <p class="card-text">Teste seus conhecimentos em matemática. Clique no botão abaixo para começar.</p>
                 <div class="menu-btns">
-                    <button id="start-btn" class="btn btn-primary">Iniciar</button>
-                    <!-- <button id="info-btn" class="btn btn-secondary">Regras/Sobre</button> -->
+                    <button id="start-btn" class="btn btn-primary"><i class="bi bi-play"></i>Iniciar</button>
+                    <button id="info-btn" class="btn btn-secondary"><i class="bi bi-list-task"></i> Sobre</button>
                 </div>
             </div>
         </div>
@@ -23,15 +24,40 @@
             <div class="card-body">
                 <div id="question-container"></div>
                 <div id="error-message" class="error-message"></div>
-                <button id="next-btn" class="btn btn-primary mt-3" onclick="nextQuestion()">Próximo</button>
+                <button id="next-btn" class="btn btn-primary mt-3" onclick="nextQuestion()"> <i class="bi bi-arrow-right"></i> Próximo</button>
             </div>
         </div>
-        <div id="result-container" class="card" style="display: none;">
+        <div id="result-container" class="card">
             <div class="card-body">
                 <div id="result" class="mt-3"></div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="sobreModal" tabindex="-1" role="dialog" aria-labelledby="sobreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sobreModalLabel">Sobre o Quiz de Matemática</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Este é um quiz de matemática onde você pode testar seus conhecimentos respondendo uma série de perguntas.</p>
+                <p>Existem perguntas de diferentes níveis de dificuldade: fácil, médio e difícil.</p>
+                <p>Cada pergunta tem um valor de pontos associado, e sua pontuação total será calculada com base nas respostas corretas.</p>
+                <p>Clique no botão "Iniciar" para começar o quiz e divirta-se!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    
 </body>
 </html>
